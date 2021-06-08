@@ -1,45 +1,75 @@
 <html>
 <head>
     <script src="jquery.js" type="text/javascript"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" rel="stylesheet"
-          style="user-select: text;">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet"
-          style="user-select: text;">
-    <script src="jqueryzoom.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="app.css">
+
 </head>
 <body>
-<h2>Image Zoom Examples</h2>
-<div style="display: flex;">
+<style>
+    body{
+        color: #333333;
+        box-sizing: border-box;
+        font-size: large;
+    }
+    h2{
+        color: #f79489;
+    }
+    .bgColor {
+        height: 400px;
+        width: 310px;
+        background: url('assets/suitBg1_trans.png') no-repeat center center;
+        background-size: contain;
+        min-width: 300px;
+        position: relative;
+    }
 
-    <div>
-        <span>Image 1: Orignal Width x Height = 317 x 446 </span>
-        <span class="zoom" style=" overflow: hidden;">
-          <img class="zoomImg" src="assets/suitImg1.webp" style="width: 400px"/>
-    </span>
+    .bgColor2 {
+        height: 400px;
+        width: 310px;
+        background: url('assets/lehenga-trans.png') no-repeat center center;
+        background-size: contain;
+        min-width: 300px;
+        position: relative;
+    }
+
+    span{
+        background-color: #fcb69f;
+        width: 299px;
+        text-align: center;
+    }
+</style>
+<h2>Image Background Examples</h2>
+<div style="display: flex; column-gap: 2%; row-gap:20px;  flex-wrap: wrap">
+
+    <div class="bgColor" style="background-color: #746C70">
+        <span style="position: absolute; left:0;bottom: 0px;padding: .35em;"> #746C70</span>
     </div>
 
-    <div>
-        <span>Image 2: Orignal Width x Height = 433 x 577 </span>
-        <span class="zoom" style=" overflow: hidden;">
-          <img class="zoomImg" src="assets/suitBg1.png" style="width: 400px"/>
-      </span>
+    <div class="bgColor2"  style="background-color: #9c7c5f">
+        <span style="position: absolute; left:0;bottom: 0px;padding: .35em;"> #9c7c5f</span>
+    </div>
+    <div class="bgColor"  style="background-color: #eae4e0">
+        <span style="position: absolute; left:0;bottom: 0px;padding: .35em;"> #eae4e0</span>
     </div>
 
-    <div>
-        <span>Image 3: Orignal Width x Height = 960 x 1280 </span>
-        <span class="zoom" style=" overflow: hidden;">
-          <img class="zoomImg" src="assets/lehenga.jpg" style="width: 400px"/>
-      </span>
+    <div class="bgColor" style="background-color: #c79d6f">
+        <span style="position: absolute; left:0;bottom: 0px;padding: .35em;"> #c79d6f</span>
+
     </div>
+    <div class="bgColor2" style="background-color: #DCD2CC">
+        <span style="position: absolute; left:0;bottom: 0px;padding: .35em;">#DCD2CC</span>
+    </div>
+    <div class="bgColor"  style="background-color: #E5D1CA">
+        <span style="position: absolute; left:0;bottom: 0px;padding: .35em;">#E5D1CA</span>
+
+    </div>
+    <div class="bgColor"  style="background-color: #d5cac6">
+        <span style="position: absolute; left:0;bottom: 0px;padding: .35em;">#d5cac6</span>
+
+    </div>
+
+
 </div>
-<script>
-    $(document).ready(function () {
-        $('img')
-            .wrap('<span style="display:inline-block"></span>')
-            .css('display', 'block')
-            .parent()
-            .zoom({magnify: 3});
-    });
-</script>
+
 </body>
 </html>
